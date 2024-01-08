@@ -3,6 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <title>Javascript Events</title>
+    <link rel="stylesheet" href="index.css">
 </head>
+<header style="text-align: center; padding-top: 100px;">Hello World!</header>
+
+<!-- Say welcome on page load -->
+<body onload="welcome()">
+    <script>
+        function welcome() {
+            alert("Welcome to Lab2! We will explore different JS events.");
+        }
+    </script>
+<br>
+<!--Onclick attribute -->
+<script  style="text-align: center;">
+    function text() {
+        return "I appear!";
+    }
+    
+</script>
+<button  style="text-align: center;" onclick="document.getElementById('demo').innerHTML = text()">What does clicking me do?</button>
+<div id="demo"></div>
+<br>
+<!--Onchange event -->
+<p>Enter some text in the Input field and then click outside the textbox!</p>
+
+Enter some text: <input type="text" name="txt" value="Enter here" onchange="myFunction(this.value)">
+
+<script>
+function myFunction(val) {
+  alert("You have entered: " + val);
+}
+</script>
+<br>
+<br>
+<br>
+<!--Onmouseover event -->
+<script>
+    function cat() {
+        return "Hi I am a cat!";
+    }
+
+    function showText() {
+        alert(cat());
+    }
+    function show2() {
+        alert("Come back!");
+    }
+</script>
+<img src="cat.jpg" onmouseover="showText()" alt="Hover over me" onmouseout="show2()" style="width: 100px; height: 100px;">
+<div id="demo"></div>
+<br>
+<!--Onmousemove event-->
+<script>
+    function happy() {
+        document.getElementById("demo2").innerHTML = "Happy!";
+    }
+
+    function sad() {
+        document.getElementById("demo2").innerHTML = "Sad";
+    }
+</script>
+<img src="dog.jpg" onmousemove="happy()" onmouseout="sad()" alt="Move over me" style="width: 100px; height: 100px;">
+<div id="demo2"></div>
+
+
+
+</body>
+
 
 </html>
