@@ -66,7 +66,20 @@ function myFunction(val) {
 </script>
 <img src="dog.jpg" onmousemove="happy()" onmouseout="sad()" alt="Move over me" style="width: 100px; height: 100px;">
 <div id="demo2"></div>
+<br>
+<!--One Key event-->
+<p>Press up and down keys within the box to change colors!</p>
+<input type="text" id="demo3" onkeydown="keydownFunction()" onkeyup="keyupFunction()">
 
+<script>
+function keydownFunction() {
+  document.getElementById("demo3").style.backgroundColor = "pink";
+}
+
+function keyupFunction() {
+  document.getElementById("demo3").style.backgroundColor = "blue";
+}
+</script>
 
 
 </body>
